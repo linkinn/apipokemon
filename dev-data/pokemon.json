@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Bulbasaur",
+    "color": "green",
+    "type": [
+      "plant",
+      "monster"
+    ],
+    "weight": 69,
+    "height": 7,
+    "abilities": [
+      "chlorophyll",
+      "overgrow"
+    ]
+  },
+  {
+    "name": "Ivysaur",
+    "color": "green",
+    "type": [
+      "plant",
+      "monster"
+    ],
+    "weight": 130,
+    "height": 10,
+    "abilities": [
+      "chlorophyll",
+      "overgrow"
+    ]
+  },
+  {
+    "name": "Charmander",
+    "color": "red",
+    "type": [
+      "dragon",
+      "monster"
+    ],
+    "weight": 85,
+    "height": 6,
+    "abilities": [
+      "solar-power",
+      "blaze"
+    ]
+  },
+  {
+    "name": "Charizard",
+    "color": "red",
+    "type": [
+      "dragon",
+      "monster"
+    ],
+    "weight": 905,
+    "height": 17,
+    "abilities": [
+      "solar-power",
+      "blaze"
+    ]
+  },
+  {
+    "name": "Mewtwo",
+    "color": "purple",
+    "type": [
+      "no-eggs",
+      "monster"
+    ],
+    "weight": 905,
+    "height": 17,
+    "abilities": [
+      "unnerve",
+      "pressure"
+    ]
+  }
+]
