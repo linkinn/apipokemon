@@ -2,7 +2,11 @@ const { Router } = require('express');
 
 const PokemonController = require('../app/controllers/PokemonController');
 
+const AuthMiddleware = require('../app/middlewares/authMiddleware');
+
 const router = Router();
+
+router.use(AuthMiddleware.protect);
 
 router
   .route('/')
