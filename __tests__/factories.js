@@ -14,10 +14,10 @@ factory.define('User', User, {
 
 factory.define('Pokemon', Pokemon, {
   name: faker.internet.userName(),
-  color: faker.color.colorName(),
+  color: faker.internet.color(),
   type: ['plant', 'monster'],
-  weight: faker.base.numberBetween($min = 1, $max = 300),
-  height: faker.base.numberBetween($min = 1, $max = 100),
+  weight: faker.random.number(),
+  height: faker.random.number(),
   abilities: ['unnerve', 'pressure']
 });
 

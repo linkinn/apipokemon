@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const uniqueValidator = require('mongoose-unique-validator');
 
 const pokemonSchema = new mongoose.Schema({
   name: {
@@ -27,6 +28,8 @@ const pokemonSchema = new mongoose.Schema({
     required: [true, 'Please provide a abilities!']
   }
 });
+
+pokemonSchema.plugin(uniqueValidator);
 
 const Pokemon = mongoose.model('Pokemon', pokemonSchema);
 
