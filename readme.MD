@@ -1,4 +1,4 @@
-![](https://github.com/linkinn/apipokemon/public/img/logo.png)
+![](https://github.com/linkinn/apipokemon/blob/master/public/img/logo.png)
 
 # Tecnologias
 
