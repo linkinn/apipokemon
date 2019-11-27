@@ -11,7 +11,7 @@ describe('Password Update', () => {
     await User.remove();
   });
 
-  it('should check if old password is correct', async () => {
+  it('should check if the old password is correct', async () => {
     const user = await factory.create('User', {
       email: 'admin@email.com'
     });
@@ -21,7 +21,7 @@ describe('Password Update', () => {
       .send({ email: user.email, password: 'test1234' });
 
     const responseUpdate = await request(app)
-      .patch('/api/v1/users/updateMyPassowrd')
+      .patch('/api/v1/users/updateMyPassword')
       .set('Authorization', `Bearer ${response.body.token}`)
       .send({
         oldPassword: 'test1234',
@@ -32,7 +32,7 @@ describe('Password Update', () => {
     expect(responseUpdate.status).toBe(200);
   });
 
-  it('should check if old password is incorrect', async () => {
+  it('should check if the old password is incorrect', async () => {
     const user = await factory.create('User', {
       email: 'admin@email.com'
     });
@@ -42,7 +42,7 @@ describe('Password Update', () => {
       .send({ email: user.email, password: 'test1234' });
 
     const responseUpdate = await request(app)
-      .patch('/api/v1/users/updateMyPassowrd')
+      .patch('/api/v1/users/updateMyPassword')
       .set('Authorization', `Bearer ${response.body.token}`)
       .send({
         oldPassword: 'passwordincorrect'

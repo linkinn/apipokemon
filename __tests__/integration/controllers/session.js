@@ -12,7 +12,7 @@ describe('Session', () => {
     await User.remove();
   });
 
-  it('should email and password login valid', async () => {
+  it('should login the user with email and password valid', async () => {
     await factory.create('User', {
       email: 'test@email.com'
     });
@@ -27,7 +27,7 @@ describe('Session', () => {
     expect(response.status).toBe(200);
   });
 
-  it('should show error because email and passowrd not exist', async () => {
+  it('should not login the user without email and passowrd', async () => {
     const response = await request(app)
       .post('/api/v1/users/login')
       .send({});
@@ -36,7 +36,7 @@ describe('Session', () => {
     expect(response.body.message).toBe('Please provide email and password!');
   });
 
-  it('should show email or password invalid', async () => {
+  it('should no login the user with email or password invalid', async () => {
     await factory.create('User', {
       email: 'test@email.com'
     });
@@ -49,7 +49,7 @@ describe('Session', () => {
     expect(response.body.message).toBe('Incorrect email or password!');
   });
 
-  it('should return token user', async () => {
+  it('should return user token', async () => {
     await factory.create('User', {
       email: 'test@email.com'
     });
@@ -75,7 +75,7 @@ describe('Session', () => {
     expect(response.status).toBe(200);
   });
 
-  it('should not acess private routes when not authenticated', async () => {
+  it('should not access private routes when not authenticated', async () => {
     const response = await request(app).get('/api/v1/users');
 
     expect(response.status).toBe(401);

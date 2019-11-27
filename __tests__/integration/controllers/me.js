@@ -19,7 +19,7 @@ describe('Me', () => {
     await User.remove();
   });
 
-  it('should subscribe user', async () => {
+  it('should register an user', async () => {
     const user = await factory.attrs('User');
     const response = await request(app)
       .post('/api/v1/users/signup')
@@ -29,7 +29,7 @@ describe('Me', () => {
     expect(response.body.data.user).toHaveProperty('email');
   });
 
-  it('should subscribe user and generate token', async () => {
+  it('should register an user and generate token', async () => {
     const user = await factory.attrs('User');
     const response = await request(app)
       .post('/api/v1/users/signup')
@@ -39,7 +39,7 @@ describe('Me', () => {
     expect(response.body).toHaveProperty('token');
   });
 
-  it('should not subscribe user with email duplicated', async () => {
+  it('should not register an user with duplicated email', async () => {
     const user = await factory.create('User');
     const response = await request(app)
       .post('/api/v1/users/signup')
@@ -48,7 +48,7 @@ describe('Me', () => {
     expect(response.status).toBe(400);
   });
 
-  it('should update your data', async () => {
+  it('should update the user data', async () => {
     await factory.create('User', {
       email: 'test@email.com'
     });
@@ -64,7 +64,7 @@ describe('Me', () => {
     expect(responseUpdate.body.data.user.email).toBe('test2@email.com');
   });
 
-  it('should not update your data email duplicated', async () => {
+  it('should not update the user data with a registered email', async () => {
     await factory.create('User', {
       email: 'test1@email.com'
     });
@@ -82,7 +82,7 @@ describe('Me', () => {
     expect(responseUpdate.status).toBe(400);
   });
 
-  it('should not update your password', async () => {
+  it('should not update the user data if this route contains the password', async () => {
     await factory.create('User', {
       email: 'test@email.com'
     });
@@ -96,11 +96,11 @@ describe('Me', () => {
 
     expect(responseUpdate.status).toBe(400);
     expect(responseUpdate.body.message).toBe(
-      'This route is not for password updates. Please use /updateMyPassowrd.'
+      'This route is not for password updates. Please use /updateMyPassword.'
     );
   });
 
-  it('should get your data', async () => {
+  it('should get the user data', async () => {
     await factory.create('User', {
       email: 'test@email.com'
     });

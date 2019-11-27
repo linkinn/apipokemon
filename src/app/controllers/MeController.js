@@ -26,7 +26,7 @@ exports.update = async (req, res) => {
   try {
     if (req.body.password || req.body.passwordConfirm) {
       throw Error(
-        'This route is not for password updates. Please use /updateMyPassowrd.'
+        'This route is not for password updates. Please use /updateMyPassword.'
       );
     }
 

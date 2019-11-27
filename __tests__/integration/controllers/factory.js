@@ -23,7 +23,7 @@ describe('Factory', () => {
     expect(response.body.data.doc.email).toBe(user.email);
   });
 
-  it('should show error invalid id', async () => {
+  it('should not get a doc with invalid id', async () => {
     app.get('/factories/:id', FactoryController.show(User));
     const response = await request(app).get(
       `/factories/5c8a1d5b0190b214360d9999`
@@ -60,7 +60,7 @@ describe('Factory', () => {
     expect(response.body.status).toBe('success');
   });
 
-  it('should create error a doc duplicated', async () => {
+  it('should not create a duplicated doc', async () => {
     const user = await factory.attrs('User', {
       email: 'admin@email.com'
     });
@@ -92,7 +92,7 @@ describe('Factory', () => {
     expect(response.body.data.doc.email).toBe('teste@email.com');
   });
 
-  it('should pdate error invalid id', async () => {
+  it('should not update a doc with invalid id', async () => {
     app.patch('/factories/:id', FactoryController.update(User));
 
     const response = await request(app)
@@ -113,7 +113,7 @@ describe('Factory', () => {
     expect(response.status).toBe(204);
   });
 
-  it('should delete error invalid id', async () => {
+  it('should not delete a doc with invalid id', async () => {
     app.delete('/factories/:id', FactoryController.delete(User));
 
     const response = await request(app).delete(

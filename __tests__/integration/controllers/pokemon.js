@@ -82,7 +82,7 @@ describe('Pokemon', () => {
     expect(response.body.data.doc).toHaveProperty('name');
   });
 
-  it('should not create a pokemon with the duplicate name', async () => {
+  it('should not create a pokemon with a duplicated name', async () => {
     const token = await getToken();
 
     const pokemon = await factory.attrs('Pokemon');
@@ -114,7 +114,7 @@ describe('Pokemon', () => {
     expect(response.body.data.doc.name).toBe('mew');
   });
 
-  it('should not update a pokemon with the duplicate name', async () => {
+  it('should not update a pokemon with a duplicated name', async () => {
     const token = await getToken();
 
     await factory.create('Pokemon', {

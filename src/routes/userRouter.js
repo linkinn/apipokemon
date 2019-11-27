@@ -14,7 +14,7 @@ router.post('/signup', MeController.store);
 
 router.use(AuthMiddleware.protect);
 
-router.patch('/updateMyPassowrd', PasswordUpdateController.update);
+router.patch('/updateMyPassword', PasswordUpdateController.update);
 
 router.get('/me', MeController.show);
 router.patch('/me', MeController.update);
