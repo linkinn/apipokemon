@@ -101,37 +101,6 @@ Apos importações dos dados podemos manipular e testar a aplicação, para isso
 npm run start
 ```
 
-### Endpoints
+### Endpoints DOC
 
- - Usuarios
-
-```
-base_url: http://localhost:3000/api/v1/users
-
-registro = POST / {{base_url}}/signup
-login = POST / {{base_url}}/login
-
-##########################################
-
-// Rotas protegidas, acesso somente com token valido
-
-sobre o usuario = GET /  {{base_url}}/me
-atualizar informações = PATCH /  {{base_url}}/me
-atualizar senha = PATCH / {{base_utl}}/updateMyPassword
-```
-
- - Pokemons
-
-```
-// Rotas protegidas, acesso somente com token valido
-
-base_url: http://localhost:3000/api/v1/pokemons
-
-mostrar todos prokemon = GET / {{base_url}}/
-mostrar pokemon especifico = GET / {{base_url}}/IDPokemon
-criar um pokemon = POST / {{base_url}}/
-atualizar um pokemon = PATCH / {{base_url}}/IDPokemon
-deletar um pokemon = DELETE / {{base_url}}/IDPokemon
-```
-
-
+Documentação dos endpoint [clique aqui!](https://documenter.getpostman.com/view/9593365/SW7ezkeJ?version=latest#4ded2659-0f70-4ea9-8607-29f3db50848b)
