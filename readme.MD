@@ -75,6 +75,20 @@ Importar os dados:
 node dev-data/import-data.js --import
 ```
 
+OBS: Antes de importar os dados devemos comentar o seguinte trecho de codigo, que se encontra dentro de src/app/schemas/userSchemas.js, devido a criação das senhas. Apos importar os dados podemos descomentar
+
+Senhas dos usuarios: test1234
+
+```
+userSchema.pre('save', async function(next) {
+  this.password = await bcrypt.hash(this.password, 12);
+
+  this.passwordConfirm = undefined;
+
+  next();
+});
+```
+
 Deletar os dados:
 
 ```
