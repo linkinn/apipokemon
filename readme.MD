@@ -27,7 +27,7 @@ O api pokemon é um projeto com o objetivo de melhorar minhas habilidades e trei
  - Instalar o [NodeJS](https://nodejs.org/en/)
  - Instalar o [Npm](https://www.npmjs.com/)
 
-### Instalando container do mongodb
+### Instalando container do mongodb :D
 
 ---
 
