@@ -3,7 +3,7 @@ name: Changelog Automation
 on:
   push:
     branches:
-      - main
+      - master
       - release/**
 
 jobs:
