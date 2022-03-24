@@ -19,9 +19,10 @@ jobs:
         run: echo "::set-output name=MESSAGE::$(echo '${{github.event.head_commit.message}}' | tail -n 1)"
 
       - name: Update Changelog
-        uses: clicksign/changelog-action@v1.2.1
+        uses: clicksign/changelog-action@v1.2.2
         with:
           changelog_new_log: ${{ steps.get_message.outputs.MESSAGE }}
           log_find: '## Alterações'
+          repo_main: 'heads/master'
         env:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
