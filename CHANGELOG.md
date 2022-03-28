@@ -1,6 +1,7 @@
 # v1.1.0
 
 ## Alterações
+- devops: test
 ---
 
 # v1.0.0
