@@ -20,7 +20,7 @@ jobs:
 
       - name: Update Changelog
         if: "!startsWith(steps.get_message.outputs.MESSAGE, 'Merge')"
-        uses: clicksign/changelog-action@v1.3.1
+        uses: clicksign/changelog-action@v1.3.2
         with:
           changelog_new_log: ${{ steps.get_message.outputs.MESSAGE }}
           log_find: '## Alterações'
