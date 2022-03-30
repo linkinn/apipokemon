@@ -1,12 +1,6 @@
-# v1.2.0
-
-## Alterações
----
-
 # v1.1.0
 
 ## Alterações
-- devops: update changelog
 - devops: condition in pipeline changelog
 - feature: create action slack send message
 - [DEVOPS] Test sem titulo com merge
