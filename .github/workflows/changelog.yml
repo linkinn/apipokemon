@@ -20,10 +20,11 @@ jobs:
 
       - name: Update Changelog
         if: "!startsWith(steps.get_message.outputs.MESSAGE, 'Merge')"
-        uses: clicksign/changelog-action@v1.3.0
+        uses: clicksign/changelog-action@v1.3.1
         with:
           changelog_new_log: ${{ steps.get_message.outputs.MESSAGE }}
           log_find: '## Alterações'
           repo_main: 'heads/master'
         env:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
+          SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
