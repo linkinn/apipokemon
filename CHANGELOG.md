@@ -1,3 +1,8 @@
+# v1.1.1
+
+## Alterações
+---
+
 # v1.1.0
 
 ## Alterações
