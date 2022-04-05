@@ -1,6 +1,6 @@
 name: Print Information
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   print:
