@@ -104,3 +104,5 @@ npm run start
 ### Endpoints DOC
 
 Documentação dos endpoint [clique aqui!](https://documenter.getpostman.com/view/9593365/SW7ezkeJ?version=latest#4ded2659-0f70-4ea9-8607-29f3db50848b)
+
+BUG
