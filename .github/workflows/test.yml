@@ -1,0 +1,17 @@
+name: Print Information
+
+on: [push, pull_request]
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Github
+        uses: actions/checkout@v3
+
+      - name: Extract branch name
+        run: echo "${GITHUB_REF#refs/heads/}"
+
+      - name: Dump GitHub context
+        id: github_context_step
+        run: echo '${{ toJSON(github) }}'
