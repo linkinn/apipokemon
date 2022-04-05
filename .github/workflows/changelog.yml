@@ -18,12 +18,16 @@ jobs:
         id: get_message
         run: echo "::set-output name=MESSAGE::$(echo '${{github.event.head_commit.message}}' | tail -n 1)"
 
+      - name: Extract branch name
+        id: extract_branch
+        run: echo "::set-output name=BRANCH_REF::$(echo ${GITHUB_REF#refs/})"
+
       - name: Update Changelog
         if: "!startsWith(steps.get_message.outputs.MESSAGE, 'Merge')"
         uses: clicksign/changelog-action@v1.4.0
         with:
           changelog_new_log: ${{ steps.get_message.outputs.MESSAGE }}
           log_find: '## Alterações'
-          repo_main: 'heads/master'
+          repo_main: steps.extract_branch.outputs.BRANCH_REF
         env:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
