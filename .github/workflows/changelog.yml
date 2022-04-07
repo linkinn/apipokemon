@@ -14,6 +14,10 @@ jobs:
       - name: Checkout Github
         uses: actions/checkout@v3
 
+      - name: Get Title PR
+        id: get_message
+        run: echo "::set-output name=MESSAGE::$(echo '${{github.event.head_commit.message}}' | tail -n 1)"
+
       - name: Update Changelog
         if: "!startsWith(github.event.head_commit.message, 'Merge')"
         uses: clicksign/changelog-action@v1.4.0
