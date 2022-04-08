@@ -18,13 +18,17 @@ jobs:
         id: get_message
         run: echo "::set-output name=MESSAGE::$(echo '${{github.event.head_commit.message}}' | tail -n 1)"
 
+      - name: Get Title PR
+        id: get_message
+        run: echo "::set-output name=MESSAGE::$(echo '${{github.event.head_commit.message}}' | tail -n 1)"
+
       - name: Update Changelog
-        if: "!startsWith(github.event.head_commit.message, 'Merge')"
+        if: "!startsWith(steps.get_message.outputs.MESSAGE, 'Merge')"
         uses: clicksign/changelog-action@v1.5.0
         with:
           changelog_new_log: ${{ github.event.head_commit.message }}
           log_find: '## Alterações'
-          repo_main: ${{ github.ref }}
+          repo_main: ${{ steps.extract_branch.outputs.BRANCH_REF }}
           max_logs: '8'
         env:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
