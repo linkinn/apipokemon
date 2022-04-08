@@ -1,6 +1,9 @@
 # v1.2.0
 
 ## Alterações
+- Merge pull request #54 from linkinn/fix/test2
+
+feature: add max logs in codition
 - vamos la de novo
 - Test4
 ---
