@@ -29,6 +29,6 @@ jobs:
           changelog_new_log: ${{ steps.get_message.outputs.MESSAGE }}
           log_find: '## Alterações'
           repo_main: ${{ steps.extract_branch.outputs.BRANCH_REF }}
-          max_logs: '8'
+          max_logs: ${{secrets.MAX_LOGS}}
         env:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
