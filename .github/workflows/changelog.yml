@@ -18,9 +18,9 @@ jobs:
         id: get_message
         run: echo "::set-output name=MESSAGE::$(echo '${{github.event.head_commit.message}}' | tail -n 1)"
 
-      - name: Get Title PR
-        id: get_message
-        run: echo "::set-output name=MESSAGE::$(echo '${{github.event.head_commit.message}}' | tail -n 1)"
+     - name: Extract branch name
+        id: extract_branch
+        run: echo "::set-output name=BRANCH_REF::$(echo ${GITHUB_REF#refs/})"
 
       - name: Update Changelog
         if: "!startsWith(steps.get_message.outputs.MESSAGE, 'Merge')"
