@@ -1,3 +1,9 @@
+# v1.3.0
+
+## Alterações
+- agora vai
+---
+
 # v1.2.0
 
 ## Alterações
