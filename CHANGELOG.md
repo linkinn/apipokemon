@@ -1,6 +1,9 @@
 # v1.3.0
 
 ## Alterações
+- Merge pull request #69 from linkinn/feature/test
+
+[KZ123] Testando
 ---
 
 
