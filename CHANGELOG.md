@@ -3,8 +3,6 @@
 ## Alterações
 - feature: test2
 - Merge pull request #69 from linkinn/feature/test
-
-[KZ123] Testando
 ---
 
 
