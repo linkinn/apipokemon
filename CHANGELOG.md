@@ -1,6 +1,7 @@
 # v1.4.0
 
 ## Alterações
+- terceiro teste
 ---
 
 # v1.3.0
