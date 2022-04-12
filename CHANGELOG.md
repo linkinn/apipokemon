@@ -1,6 +1,7 @@
 # v1.4.0
 
 ## Alterações
+- testando a release 1.4
 - quinto teste
 - quarto teste
 - terceiro teste
