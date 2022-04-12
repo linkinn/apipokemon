@@ -1,6 +1,7 @@
 # v1.3.0
 
 ## Alterações
+- testando release de novo
 - testando release
 - segundo test
 - feature: test2
