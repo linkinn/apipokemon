@@ -1,3 +1,18 @@
+# v1.4.0
+
+## Alterações
+- terceiro teste
+---
+
+# v1.3.0
+
+## Alterações
+- segundo test
+- feature: test2
+- Merge pull request #69 from linkinn/feature/test
+---
+
+
 # v1.2.0
 
 ## Alterações
