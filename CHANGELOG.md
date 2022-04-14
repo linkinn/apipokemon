@@ -1,6 +1,7 @@
 # v1.5.0
 
 ## Alterações
+- fix: vamos la
 ---
 
 # v1.4.0
