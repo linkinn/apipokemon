@@ -1,6 +1,12 @@
+# v1.6.0
+
+## Alterações
+---
+
 # v1.5.0
 
 ## Alterações
+- change revision
 - fix: revisionmmmm
 - fix: vamos la
 ---
