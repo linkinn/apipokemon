@@ -2,6 +2,7 @@
 
 ## Alterações
 - fix: update docker file add CMD
+- fix: update docker file add CMD
 ---
 
 # v1.5.0
