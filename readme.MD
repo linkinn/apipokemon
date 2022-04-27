@@ -107,4 +107,4 @@ Documentação dos endpoint [clique aqui!](https://documenter.getpostman.com/vie
 
 quarto teste
 quinto teste
-testando a release 1.4
+testando a release 1.4 resolved
