@@ -14,7 +14,7 @@ jobs:
 
       - name: Slack Send Message
         id: thread_id
-        uses: clicksign/lagged-branches-action@v1.0.0
+        uses: clicksign/lagged-branches-action@v1.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
@@ -33,7 +33,7 @@ jobs:
         run: echo ${{ needs.slack.outputs.thread_ts }}
 
       - name: Slack Send Message in Thread
-        uses: clicksign/lagged-branches-action@v1.0.0
+        uses: clicksign/lagged-branches-action@v1.1.0
         with:
           channel_id: ${{secrets.CHANNEL_ID}}
           thread_ts: ${{ needs.slack.outputs.thread_ts }}
