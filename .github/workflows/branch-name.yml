@@ -1,0 +1,16 @@
+name: 'Branch Name Validate'
+
+on:
+  create
+
+jobs:
+  test: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: clicksign/branch-name-action@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+        with:
+          channel_id: ${{ secrets.CHANNEL_ID }}
