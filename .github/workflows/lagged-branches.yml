@@ -1,0 +1,43 @@
+name: Lagged Branches
+
+on:
+  workflow_dispatch:
+
+jobs:
+  slack:
+    runs-on: ubuntu-latest
+    outputs:
+      thread_ts: ${{ steps.thread_id.outputs.thread_ts }}
+    steps:
+      - name: Checkout Github
+        uses: actions/checkout@v3
+
+      - name: Slack Send Message
+        id: thread_id
+        uses: clicksign/lagged-branches-action@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+        with:
+          channel_id: ${{ secrets.CHANNEL_ID }}
+          max_days: 1
+
+  slack-thread:
+    runs-on: ubuntu-latest
+    needs: slack
+    steps:
+      - name: Checkout Github
+        uses: actions/checkout@v3
+
+      - name: Echo Thread ID
+        run: echo ${{ needs.slack.outputs.thread_ts }}
+
+      - name: Slack Send Message in Thread
+        uses: clicksign/lagged-branches-action@v1.0.0
+        with:
+          channel_id: ${{secrets.CHANNEL_ID}}
+          thread_ts: ${{ needs.slack.outputs.thread_ts }}
+          max_days: 1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
