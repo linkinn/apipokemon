@@ -1,7 +1,12 @@
+# v1.7.0
+
+## Alterações
+---
+
 # v1.6.0
 
 ## Alterações
-- gg teste
+- gg
 - fix: update docker file add CMD
 - fix: update docker file add CMD
 ---
