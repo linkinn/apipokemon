@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   print:
     runs-on: ubuntu-latest
-    if: "!startsWith(github.event.head_commit.message, 'Merge')" || github.event.pull_request.draft == false"
+    if: "github.event.pull_request.draft == false || !startsWith(github.event.head_commit.message, 'Merge')"
     steps:
       - name: Checkout Github
         uses: actions/checkout@v3
