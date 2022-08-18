@@ -1,6 +1,7 @@
 # v1.7.0
 
 ## Alterações
+- devops: update2
 - devops: update
 ---
 
