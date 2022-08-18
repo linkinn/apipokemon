@@ -1,7 +1,7 @@
 ![](https://github.com/linkinn/apipokemon/blob/master/public/img/logo.png)
 
 # Tecnologias
-
+dddd
 ---
 
 Esse projeto foi desenvolvido com as seguintes tecnologias.
