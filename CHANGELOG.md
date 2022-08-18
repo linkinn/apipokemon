@@ -1,6 +1,12 @@
+# v1.8.0
+
+## Alterações
+---
+
 # v1.7.0
 
 ## Alterações
+- devops: update3
 - devops: update2
 - devops: update
 ---
