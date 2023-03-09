@@ -13,7 +13,7 @@ jobs:
         id: test_output
         run: |
           cat -d || \
-          if [ $? == 1 ]
+          if [ $? == 2 ]
           then
             echo "test=failure" >> "$GITHUB_OUTPUT"
           else
@@ -28,6 +28,6 @@ jobs:
   job3:
     runs-on: ubuntu-latest
     needs: job1
-    if: needs.job1.outputs.output1 == 'success'
+    if: "contains(needs.job1.outputs.output1,'success')"
     steps:
       - run: echo "certo"
