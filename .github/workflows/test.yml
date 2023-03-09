@@ -15,9 +15,9 @@ jobs:
           cat -d || \
           if [ $? == 1 ]
           then
-            echo "test=failure" >> "$GITHUB_OUTPUT"
+            echo "::set-output name=test::failure"
           else
-            echo "test=success" >> "$GITHUB_OUTPUT"
+            echo "::set-output name=test::success"
           fi
   job2:
     runs-on: ubuntu-latest
