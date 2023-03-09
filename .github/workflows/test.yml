@@ -13,6 +13,10 @@ jobs:
         id: test_output
         run: |
           ls || \
+          code=$?
+
+          echo $code
+
           if [ $? == 1 ]
           then
             echo "test=failure" >> "$GITHUB_OUTPUT"
@@ -20,7 +24,7 @@ jobs:
             echo "test=success" >> "$GITHUB_OUTPUT"
           fi
 
-          echo "$GITHUB_OUTPUT"
+          echo $GITHUB_OUTPUT
   job2:
     runs-on: ubuntu-latest
     needs: job1
