@@ -22,12 +22,12 @@ jobs:
   job2:
     runs-on: ubuntu-latest
     needs: job1
-    if: contains(needs.job1.outputs.output1 == 'failure')
+    if: needs.job1.outputs.output1 == 'failure'
     steps:
       - run: echo "error"
   job3:
     runs-on: ubuntu-latest
     needs: job1
-    if: contains(needs.job1.outputs.output1 == 'success')
+    if: needs.job1.outputs.output1 == 'success'
     steps:
       - run: echo "certo"
