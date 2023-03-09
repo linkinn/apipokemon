@@ -13,7 +13,7 @@ jobs:
         id: test_output
         run: |
           code=0
-          cat -d || code=$?
+          ls || code=$?
 
           if [ $code == 1 ]
           then
