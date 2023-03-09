@@ -15,14 +15,14 @@ jobs:
           cat -d || \
           if [ $? == 1 ]
           then
-            echo "::set-output name=test::failure"
+            echo "test=failure" >> "$GITHUB_OUTPUT"
           else
-            echo "::set-output name=test::success"
+            echo "test=success" >> "$GITHUB_OUTPUT"
           fi
   job2:
     runs-on: ubuntu-latest
     needs: job1
-    if: needs.job1.outputs.output1 == 'failure'
+    if: "contains(needs.job1.outputs.output1,'failure')"
     steps:
       - run: echo "error"
   job3:
