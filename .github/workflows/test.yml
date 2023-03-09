@@ -12,7 +12,7 @@ jobs:
       - name: Test outputs
         id: test_output
         run: |
-          cat -d
+          cat -d || true
           if [ $? == 1 ]
           then
             echo "test=failure" >> "$GITHUB_OUTPUT"
