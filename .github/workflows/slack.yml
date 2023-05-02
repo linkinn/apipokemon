@@ -18,7 +18,6 @@ jobs:
           channel-id: ${{ secrets.CHANNEL_ID }}
           payload: |
             {
-              "text": "@channel homologada a `release/v1 da aplicação apipokemon",
               "blocks": [
                 {
                   "type": "section",
@@ -33,7 +32,8 @@ jobs:
                       "text": "Google",
                       "emoji": true
                     },
-                    "value": "https://google.com",
+                    "value": "Acessar o google",
+                    "url": "https://google.com",
                     "action_id": "button-action"
                   }
                 }
