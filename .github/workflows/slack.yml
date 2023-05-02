@@ -25,22 +25,16 @@ jobs:
                   "text": {
                     "type": "mrkdwn",
                     "text": "@channel homologada a `release/v1 da aplicação apipokemon"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "<https://google.com|The Great Northern Hotel> :star::star::star::star:"
                   },
                   "accessory": {
                     "type": "button",
                     "text": {
                       "type": "plain_text",
-                      "text": "View",
+                      "text": "Google",
                       "emoji": true
                     },
-                    "value": "google"
+                    "value": "https://google.com",
+                    "action_id": "button-action"
                   }
                 }
               ]
