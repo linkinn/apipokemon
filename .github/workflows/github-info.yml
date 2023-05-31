@@ -1,0 +1,21 @@
+name: Github info
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - release/**
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Github
+        uses: actions/checkout@v3
+
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT"
