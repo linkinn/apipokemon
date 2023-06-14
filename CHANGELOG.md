@@ -1,6 +1,12 @@
+# v1.10.0
+
+## Alterações
+---
+
 # v1.9.0
 
 ## Alterações
+- update5 - [#129](https://github.com/linkinn/apipokemon/pull/129)
 - update 3 - [#128](https://github.com/linkinn/apipokemon/pull/128)
 - update - [#127](https://github.com/linkinn/apipokemon/pull/127)
 - update - [#126](https://github.com/linkinn/apipokemon/pull/126)
