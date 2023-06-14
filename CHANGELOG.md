@@ -1,6 +1,7 @@
 # v1.10.0
 
 ## Alterações
+- update > [#130](https://github.com/linkinn/apipokemon/pull/130)
 ---
 
 # v1.9.0
