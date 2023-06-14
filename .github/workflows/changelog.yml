@@ -24,11 +24,11 @@ jobs:
 
       - name: Update Changelog
         if: "!startsWith(steps.get_message.outputs.MESSAGE, 'Merge')"
-        uses: clicksign/changelog-action@v1.8.0
+        uses: clicksign/changelog-action@v1.9.0
         with:
           changelog_new_log: ${{ steps.get_message.outputs.MESSAGE }}
           log_find: '## Alterações'
           repo_main: ${{ steps.extract_branch.outputs.BRANCH_REF }}
-          max_logs: '2'
+          max_logs: '8'
         env:
           GITHUB_TOKEN: ${{secrets.TOKEN}}
